@@ -5,31 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Filemon Dimas Wibisana — Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Profile Photo */
-    .profile-photo {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 4px solid #6b46ff;
-        object-fit: cover;
-        display: block;
-        margin: 20px auto;
-    }
-
-    /* Project Video */
-    .project-video {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-        margin-top: 15px;
-        border-radius: 8px;
-        display: block;
-    }
-  </style>
 </head>
 <body>
-
+ 
   <div class="decoration dec1"></div>
   <div class="decoration dec2"></div>
   <div class="decoration dec3"></div>
@@ -44,137 +22,148 @@
 
   <header class="hero">
     <img src="foto.jpg" alt="Foto Profil" class="profile-photo" />
-    <h1>Filemon Dimas Wibisana</h1>
-    <p class="role">Software Engineer • UI/UX Enthusiast</p>
-    <p class="contact">filemon.wibisana@binus.ac.id | +62 857 1718 1476</p>
+    <div class="container">
+      <h1>Filemon Dimas Wibisana</h1>
+      <p class="role">Software Engineer • UI/UX Enthusiast</p>
+      <p class="contact">filemon.wibisana@binus.ac.id | +62 857 1718 1476</p>
+    </div>
   </header>
 
   <main>
-    <!-- About Section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>I am a passionate software engineer with a strong interest in web development, 
-      user experience design, and data-driven applications. With hands-on experience in
-      both frontend and backend development, I enjoy solving problems, creating impactful
-      projects, and continuously learning new technologies.</p>
+    <section id="about"><br>
+      <div class="container section-container">
+        <h2>About</h2>
+        <p>I am a passionate software engineer with a strong interest in web development, 
+        user experience design, and data-driven applications. With hands-on experience in
+        both frontend and backend development, I enjoy solving problems, creating impactful
+        projects, and continuously learning new technologies.</p>
+      </div>
     </section>
 
     <!-- Organizational Experience -->
-    <section id="experience">
-      <h2>Organizational Experience</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <div class="project-header">
-            <h3>Internal Division Activist — BINUS Futsal</h3>
-            <span class="year-badge">2024</span>
-          </div>
-          <p>Responsible for member attendance, game preparation, and serving as an official during matches.</p>
-        </div>
+    <section id="experience"><br>
+      <div class="container section-container">
+        <h2>Organizational Experience</h2>
+        <div class="experience-list">
 
-        <div class="project">
-          <div class="project-header">
-            <h3>Match Division Staff — Road to Internal Cup & Alam Sutera League</h3>
-            <span class="year-badge">2024</span>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Internal Division Activist — BINUS Futsal</h3>
+              <span class="year-badge">2024</span>
+            </div>
+            <p>Responsible for member attendance, game preparation, and serving as an official during matches.</p>
           </div>
-          <p>Coordinated match schedules and ensured smooth operations during the events.</p>
-        </div>
 
-        <div class="project">
-          <div class="project-header">
-            <h3>Event Division Staff & MC — BINUS Futsal Championship</h3>
-            <span class="year-badge">2024</span>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Match Division Staff — Road to Internal Cup & Alam Sutera League</h3>
+              <span class="year-badge">2024</span>
+            </div>
+            <p>Coordinated match schedules and ensured smooth operations during the events.</p>
           </div>
-          <p>Assisted in organizing the event and took the role of master of ceremony (MC).</p>
-        </div>
 
-        <div class="project">
-          <div class="project-header">
-            <h3>Public Relations Staff — BINUS Internal Cup Greater Jakarta</h3>
-            <span class="year-badge">2025</span>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Event Division Staff & MC — BINUS Futsal Championship</h3>
+              <span class="year-badge">2024</span>
+            </div>
+            <p>Assisted in organizing the event and took the role of master of ceremony (MC).</p>
           </div>
-          <p>Handled communication and promotional activities for the event.</p>
-        </div>
 
-        <div class="project">
-          <div class="project-header">
-            <h3>Creative Division Coordinator — BINUS Futsal</h3>
-            <span class="year-badge ongoing">2025 – Present</span>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Public Relations Staff — BINUS Internal Cup Greater Jakarta</h3>
+              <span class="year-badge">2025</span>
+            </div>
+            <p>Handled communication and promotional activities for the event.</p>
           </div>
-          <p>Responsible for designing posters and creating regular Instagram content for BINUS Futsal.</p>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Creative Division Coordinator — BINUS Futsal</h3>
+              <span class="year-badge ongoing">2025 – Present</span>
+            </div>
+            <p>Responsible for designing posters and creating regular Instagram content for BINUS Futsal.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="chips">
-        <span class="chip">Python Programming</span>
-        <span class="chip">Frontend Development (HTML, CSS, JavaScript)</span>
-        <span class="chip">UI/UX Design (Figma)</span>
-        <span class="chip">Database Management (SQL)</span>
-        <span class="chip">API Development</span>
-        <span class="chip">Web Development (React, Streamlit)</span>
-        <span class="chip">Design Tools (Canva, Adobe Photoshop)</span>
-        <span class="chip">Video Editing (CapCut, Adobe Premiere Pro)</span>
-      </div>
+    <section id="skills"><br>
+      <div class="container section-container">
+        <h2>Technical Skills</h2>
+        <div class="chips">
+          <span class="chip">Python Programming</span>
+          <span class="chip">Frontend Development (HTML, CSS, JavaScript)</span>
+          <span class="chip">UI/UX Design (Figma)</span>
+          <span class="chip">Database Management (SQL)</span>
+          <span class="chip">API Development</span>
+          <span class="chip">Web Development (React, Streamlit)</span>
+          <span class="chip">Design Tools (Canva, Adobe Photoshop)</span>
+          <span class="chip">Video Editing (CapCut, Adobe Premiere Pro)</span>
+        </div>
 
-      <h2>Soft Skills</h2>
-      <div class="chips">
-        <span class="chip chip-soft">Problem Solving</span>
-        <span class="chip chip-soft">Creative Thinking</span>
-        <span class="chip chip-soft">Collaborative Development</span>
-        <span class="chip chip-soft">Project Management</span>
-        <span class="chip chip-soft">Analytical Thinking</span>
-        <span class="chip chip-soft">Adaptability</span>
-        <span class="chip chip-soft">Attention to Detail</span>
-        <span class="chip chip-soft">Effective Communication</span>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project">
-          <h3>Car Showroom Website Design "DiamondCut"</h3>
-          <p>Designed and developed a luxury car e-commerce showroom with a focus on intuitive navigation, 
-          elegant UI, and structured product categorization. Integrated a quick search feature to improve 
-          user experience and ensure clear, trustworthy product presentation.</p>
-          <h5>Project PDF:</h5>
-          <p><a href="DiamondCut.pdf" target="_blank">Open Full PDF</a></p>
-        </article>
-
-        <article class="project">
-          <h3>FundNation Website</h3>
-          <p>FundNation is a digital platform for students designed to publish and monetize their creative projects through a sales and donation system. By providing features like project uploads, sales, and donations, the platform aims to encourage students to be more 
-          productive, self-reliant, and innovative in creating commercially valuable work.</p>
-          <h5>Website Demonstration Video:</h5>
-          <video class="project-video" controls>
-            <source src="FundNation.mp4" type="video/mp4">
-          </video>
-        </article>
-
-        <article class="project">
-          <h3>Toxicity and Hate Speech Detection AI</h3>
-          <p>Developed a deep learning model (LSTM) for toxic and hate speech detection using NLP techniques. Implemented preprocessing with tokenization and embedding, trained with TensorFlow, and deployed via Gradio interface. The system classifies toxic content (toxic, obscene, insult, etc.) to support automated content moderation.</p>
-          <h5>Project Preview:</h5>
-          <img src="toxic_ai.png" alt="Toxic AI Project Preview" class="project-video">
-        </article>
+        <h2>Soft Skills</h2>
+        <div class="chips">
+          <span class="chip-soft">Problem Solving</span>
+          <span class="chip-soft">Creative Thinking</span>
+          <span class="chip-soft">Collaborative Development</span>
+          <span class="chip-soft">Project Management</span>
+          <span class="chip-soft">Analytical Thinking</span>
+          <span class="chip-soft">Adaptability</span>
+          <span class="chip-soft">Attention to Detail</span>
+          <span class="chip-soft">Effective Communication</span>
+        </div>
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      <p>Bina Nusantara University<br>
-      Computer Science (Software Engineering)<br>
-      2023 – Present</p>
+    <section id="projects"><br>
+      <div class="container section-container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <article class="project">
+            <h3>Car Showroom Website Design "DiamondCut"</h3>
+            <p>Designed and developed a luxury car e-commerce showroom with a focus on intuitive navigation, 
+            elegant UI, and structured product categorization. Integrated a quick search feature to improve 
+            user experience and ensure clear, trustworthy product presentation.</p><br>
+            <h5>Project PDF:</h5><br>
+            <p><a href="DiamondCut.pdf" target="_blank">Open Full PDF</a></p>
+          </article>
+          
+          <article class="project">
+            <h3>FundNation Website</h3>
+            <p>FundNation is a digital platform for students designed to publish and monetize their creative projects through a sales and donation system.</p><br>
+            <h5>Website Demonstration Video:</h5>
+            <video class="project-video" controls>
+              <source src="FundNation.mp4" type="video/mp4">
+            </video>
+          </article>
+
+          <article class="project">
+            <h3>Toxicity and Hate Speech Detection AI</h3>
+            <p>Developed a deep learning model (LSTM) for toxic and hate speech detection using NLP techniques. Implemented preprocessing with tokenization and embedding, trained with TensorFlow, and deployed via Gradio interface.</p><br>
+            <h5>Project Preview:</h5><br>
+            <img src="toxic_ai.png" alt="Toxic AI Project Preview" 
+              style="width:100%;max-width:600px;border-radius:8px;display:block;margin-top:10px;">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education"><br>
+      <div class="container section-container">
+        <h2>Education</h2>
+        <p>Bina Nusantara University<br>
+        Computer Science (Software Engineering)<br>
+        2023 – Present</p>
+      </div>
     </section>
   </main>
 
-  <footer></footer>
+  <footer>
+    <p>© 2025 Filemon Dimas Wibisana — Portfolio</p>
+  </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
