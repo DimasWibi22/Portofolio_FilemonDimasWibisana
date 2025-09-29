@@ -136,6 +136,17 @@ section h2 {
 .project h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .project p { font-size: 0.95rem; color: #444; }
 
+/* Project Video */
+.project-video {
+  width: 100%;              /* penuh selebar card */
+  height: 250px;            /* tinggi seragam */
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;        /* isi kotak penuh */
+  margin-top: 10px;
+  background: #000;         /* biar rapi saat loading */
+}
+
 /* Organizational Experience */
 .experience-list {
   display: flex;
