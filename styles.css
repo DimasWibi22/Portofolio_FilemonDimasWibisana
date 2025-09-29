@@ -175,6 +175,54 @@ section h2 {
 .experience-item h3 { font-size: 1.1rem; color: var(--bg1); }
 .experience-item p { font-size: 0.95rem; color: #444; }
 
+/* ========== Organizational Experience Photos Box ========== */
+.experience-photos-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 25px;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.experience-photos-box h3 {
+  font-size: 1.2rem;
+  color: var(--bg1);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--bg1);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Foto grid */
+.experience-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.experience-photos img {
+  width: calc(25% - 9px);   /* 4 foto per baris di desktop */
+  border-radius: 10px;
+  object-fit: cover;
+  height: 120px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.experience-photos img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsif di HP */
+@media (max-width: 600px) {
+  .experience-photos img {
+    width: calc(50% - 6px);  /* 2 foto per baris di HP */
+    height: 100px;
+  }
+}
+
+
 /* Year Badge */
 .year-badge {
   background: linear-gradient(90deg, var(--bg1), var(--bg2));
