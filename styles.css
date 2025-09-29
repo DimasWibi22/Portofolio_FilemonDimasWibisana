@@ -5,7 +5,6 @@
   --radius: 16px;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -28,22 +27,39 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
+/* Navbar Tombol */
 nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
   padding: 15px;
-  background: rgba(20,20,20,0.85);
+  background: rgba(20,20,20,0.7);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px var(--shadow);
   position: sticky;
   top: 0;
   z-index: 99;
   border-radius: 0 0 20px 20px;
+  flex-wrap: wrap;
 }
-nav a { font-weight: 600; color: #9ad1ff; transition: all 0.3s ease; }
-nav a:hover { color: #c084fc; transform: translateY(-2px); }
+
+.nav-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+.nav-btn:hover {
+  background: linear-gradient(135deg, #6366f1, #c026d3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.6);
+}
 
 /* Hero */
 .hero {
@@ -237,7 +253,8 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-  nav { flex-wrap: wrap; gap: 15px; padding: 10px; }
+  nav { gap: 10px; padding: 10px; }
+  .nav-btn { padding: 6px 14px; font-size: 0.85rem; }
   .hero h1 { font-size: 1.5rem; }
   section { padding: 30px 15px; margin: 15px; }
   .projects-grid { gap: 15px; }
