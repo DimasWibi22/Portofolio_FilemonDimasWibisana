@@ -1,11 +1,7 @@
-/* ========== Base ========== */
 :root {
-  --bg1: #6a11cb;
-  --bg2: #2575fc;
-  --bg3: #ff6a88;
-  --text: #222;
-  --light: #fff;
-  --shadow: rgba(0, 0, 0, 0.1);
+  --text: #f5f5f5;
+  --light: #141414;
+  --shadow: rgba(0, 0, 0, 0.6);
   --radius: 16px;
 }
 
@@ -16,22 +12,20 @@
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Aurora Gradient Background */
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
-  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+  background: linear-gradient(270deg, #0d1b4c, #1a0033, #2e0f5f, #3b1d60);
+  background-size: 400% 400%;
+  animation: gradient-move 20s ease infinite;
   color: var(--text);
   line-height: 1.6;
 }
-
-/* Decorations */
-.decoration {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  z-index: -1;
-}
-.dec1 { width: 200px; height: 200px; top: 10%; left: 5%; }
-.dec2 { width: 150px; height: 150px; bottom: 15%; right: 10%; }
-.dec3 { width: 100px; height: 100px; top: 40%; right: 20%; }
 
 /* Navbar */
 nav {
@@ -39,7 +33,7 @@ nav {
   justify-content: center;
   gap: 25px;
   padding: 15px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(20,20,20,0.85);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px var(--shadow);
   position: sticky;
@@ -47,23 +41,23 @@ nav {
   z-index: 99;
   border-radius: 0 0 20px 20px;
 }
-nav a { font-weight: 600; color: var(--bg1); transition: all 0.3s ease; }
-nav a:hover { color: var(--bg3); transform: translateY(-2px); }
+nav a { font-weight: 600; color: #9ad1ff; transition: all 0.3s ease; }
+nav a:hover { color: #c084fc; transform: translateY(-2px); }
 
 /* Hero */
 .hero {
   text-align: center;
   padding: 50px 20px 30px;
   background: var(--light);
-  border-bottom: 4px solid var(--bg1);
+  border-bottom: 4px solid #3b82f6;
 }
 .hero h1 { font-size: 2rem; margin-top: 10px; }
-.hero .role { font-size: 1.2rem; color: #555; }
-.hero .contact { font-size: 0.9rem; margin-top: 5px; }
+.hero .role { font-size: 1.2rem; color: #bbb; }
+.hero .contact { font-size: 0.9rem; margin-top: 5px; color: #aaa; }
 .profile-photo {
   width: 180px; height: 180px;
   border-radius: 50%;
-  border: 4px solid var(--bg1);
+  border: 4px solid #6366f1;
   object-fit: cover;
   display: block; margin: 20px auto;
 }
@@ -82,9 +76,10 @@ section:hover { transform: translateY(-4px); }
 section h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  border-bottom: 3px solid var(--bg1);
+  border-bottom: 3px solid #6366f1;
   display: inline-block;
   padding-bottom: 5px;
+  color: #fff;
 }
 
 /* Chips */
@@ -96,24 +91,43 @@ section h2 {
   font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
   transition: all 0.3s ease;
 }
 .chip {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
   color: #fff;
 }
 .chip:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #2575fc, #ff6a88);
+  background: linear-gradient(135deg, #6366f1, #c026d3);
 }
 .chip-soft {
-  background: linear-gradient(135deg, #ff6a88, #f472b6);
+  background: linear-gradient(135deg, #9333ea, #db2777);
   color: #fff;
 }
 .chip-soft:hover {
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #f472b6, #6a11cb);
+  background: linear-gradient(135deg, #a855f7, #f43f5e);
+}
+
+/* PDF Button */
+.btn-pdf {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+.btn-pdf:hover {
+  background: linear-gradient(135deg, #6366f1, #c026d3);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.6);
 }
 
 /* Projects */
@@ -123,7 +137,7 @@ section h2 {
   gap: 20px;
 }
 .project {
-  background: #fff;
+  background: #222;
   border-radius: var(--radius);
   padding: 20px;
   box-shadow: 0 4px 12px var(--shadow);
@@ -131,30 +145,26 @@ section h2 {
 }
 .project:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
-.project h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.project p { font-size: 0.95rem; color: #444; }
+.project h3 { font-size: 1.2rem; margin-bottom: 8px; color: #fff; }
+.project p { font-size: 0.95rem; color: #ccc; }
 
 /* Project Video */
 .project-video {
-  width: 100%;              /* penuh selebar card */
-  height: 250px;            /* tinggi seragam */
+  width: 100%;
+  height: 250px;
   border-radius: 8px;
   display: block;
-  object-fit: cover;        /* isi kotak penuh */
+  object-fit: cover;
   margin-top: 10px;
-  background: #000;         /* biar rapi saat loading */
+  background: #000;
 }
 
-/* Organizational Experience */
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+/* Experience */
+.experience-list { display: flex; flex-direction: column; gap: 20px; }
 .experience-item {
-  background: #fff;
+  background: #222;
   border-radius: var(--radius);
   padding: 20px 25px;
   box-shadow: 0 4px 12px var(--shadow);
@@ -162,94 +172,72 @@ section h2 {
   display: flex;
   flex-direction: column;
 }
-.experience-item:hover {
-  transform: translateX(6px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.experience-item h3 { font-size: 1.1rem; color: var(--bg1); }
-.experience-item p { font-size: 0.95rem; color: #444; }
+.experience-item:hover { transform: translateX(6px); box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+.experience-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.experience-item h3 { font-size: 1.1rem; color: #9ad1ff; }
+.experience-item p { font-size: 0.95rem; color: #ccc; }
 
-/* ========== Organizational Experience Photos Box ========== */
+/* Experience Photos */
 .experience-photos-box {
-  background: #fff;
+  background: #222;
   border-radius: var(--radius);
   padding: 20px 25px;
   margin-top: 25px;
   box-shadow: 0 4px 12px var(--shadow);
 }
-
 .experience-photos-box h3 {
   font-size: 1.2rem;
-  color: var(--bg1);
+  color: #fff;
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--bg1);
+  border-bottom: 2px solid #6366f1;
   display: inline-block;
   padding-bottom: 5px;
 }
-
-/* Foto grid */
 .experience-photos {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
-
 .experience-photos img {
-  width: calc(25% - 9px);   /* 4 foto per baris di desktop */
+  width: calc(25% - 9px);
   border-radius: 10px;
   object-fit: cover;
   height: 120px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-
-.experience-photos img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsif di HP */
+.experience-photos img:hover { transform: scale(1.05); }
 @media (max-width: 600px) {
-  .experience-photos img {
-    width: calc(50% - 6px);  /* 2 foto per baris di HP */
-    height: 100px;
-  }
+  .experience-photos img { width: calc(50% - 6px); height: 100px; }
 }
-
 
 /* Year Badge */
 .year-badge {
-  background: linear-gradient(90deg, var(--bg1), var(--bg2));
-  color: var(--light);
+  background: linear-gradient(90deg, #3b82f6, #9333ea);
+  color: #fff;
   font-size: 0.8rem;
   padding: 5px 12px;
   border-radius: 20px;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
-.year-badge.ongoing {
-  background: linear-gradient(90deg, var(--bg3), #f472b6);
-}
+.year-badge.ongoing { background: linear-gradient(90deg, #9333ea, #db2777); }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: var(--light);
-  color: #777;
+  background: #111;
+  color: #aaa;
   font-size: 0.9rem;
-  border-top: 3px solid var(--bg1);
+  border-top: 3px solid #6366f1;
 }
 
 /* Responsive */
 @media (max-width: 600px) {
+  nav { flex-wrap: wrap; gap: 15px; padding: 10px; }
   .hero h1 { font-size: 1.5rem; }
-  section { padding: 30px 15px; }
+  section { padding: 30px 15px; margin: 15px; }
   .projects-grid { gap: 15px; }
 }
